@@ -1,0 +1,15 @@
+.switch-bg{
+    display: flex;
+    align-items: center;
+}
+.switch-bg span{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 2.5px;
+    margin-right: 1.2em;
+}
+.light{
+    color: #697C9A;
+}

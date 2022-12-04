@@ -1,0 +1,12 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+header > p{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #222731;
+}

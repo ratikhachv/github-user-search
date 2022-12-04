@@ -1,0 +1,29 @@
+.footer{
+    width: 100%;
+    display: flex;
+}
+.footer-column{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.footer-column div{
+    display: flex;
+    gap: 5%;
+}
+.footer-column p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #4B6A9B;
+}
+.not-available{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #4B6A9B;
+    opacity: 0.5;
+}

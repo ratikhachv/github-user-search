@@ -1,0 +1,22 @@
+.desktop{
+    min-width: 100vW;
+    height: 100vh;
+    background: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    padding:16vh auto;
+    width: 50.7%;
+}
+
+.desktop-active{
+    background-color: #141D2F;
+    min-width: 100vW;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

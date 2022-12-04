@@ -1,0 +1,24 @@
+.active{
+    background-color: #1E2A47;
+}
+.text-active{
+    color: white;
+}
+#active{
+    background: #1E2A47;
+}
+#active h3{
+    color: white;
+}
+#active .search-bar{
+    background: transparent;
+}
+#active input, select, textarea{
+    color: white;
+}
+#active #login{
+    color: #0079FF;
+}
+#active .followers-div{
+    background-color:#141D2F ;
+}
