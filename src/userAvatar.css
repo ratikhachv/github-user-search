@@ -4,3 +4,12 @@
     border-radius: 50%;
     margin-right: 2.4em;
 }
+
+@media only screen and (max-width: 700px){
+    .avatar-div{
+        display: inline-block;
+    }
+    .avatar-div img{
+        margin: 0 auto;
+    }
+}

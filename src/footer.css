@@ -13,17 +13,33 @@
     gap: 5%;
 }
 .footer-column p{
+    font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
     color: #4B6A9B;
+    white-space: nowrap;
 }
+
+.footer-column-left{
+    margin-right: 15%;
+}
+
 .not-available{
+    font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
     color: #4B6A9B;
     opacity: 0.5;
+}
+@media only screen and (max-width: 700px){
+   .footer{
+    flex-direction: column;
+   }
+   .footer-column-left{
+    margin-bottom: 5%;
+    }
 }

@@ -10,6 +10,7 @@ import Container from './Container';
 import { Context } from './Context';
 import { matchPath } from "react";
 import DateObject from 'react-date-object';
+import { USERS_ENDPOINT } from './constants/endpoints';
 
 
 function App() {
@@ -33,14 +34,18 @@ function App() {
   
    
   useEffect(() => {
-    axios.get(`https://api.github.com/users/${userLogin}`).then((response) =>{
+    axios.get(`${USERS_ENDPOINT}${userLogin}`).then((response) =>{
       let data = response.data
       console.log(data);
+      
       let getDate = data.created_at
       getDate = getDate.slice(0, 10)
+      
       let date = new DateObject(getDate)
       let convertedDate = date.format("DD MMMM YYYY");
+      
       console.log(date.format("DD MMMM YYYY"));
+      
       setAvatarUrl(data.avatar_url)
       setRegisterDate("Joined " + convertedDate)
       setUserName(data.name)
@@ -52,18 +57,20 @@ function App() {
       setBlog(data.blog)
       setOffice(data.company)
       setTwitter(data.twitter_username)
+      
       console.log("works");
   
     }).catch(e =>{
       console.log(e);
       setnoResults("No Results")
     })
-  },[userLogin])
+  }, [userLogin] )
 
   function searchUser(e){
     setSearchValue(e.target.value)
     console.log(userLogin);
   }
+
   function confirm(){
     setUserLogin(searchValue)
     console.log(userLogin);
@@ -73,6 +80,7 @@ function App() {
     setBgChangeActive(!bgChangeActive)
     console.log("clicked active");
   }
+
   function changeBg(){
     console.log("checking", bgChangeActive);
     if(bgChangeActive){
@@ -84,15 +92,35 @@ function App() {
     }    
   }
   
-  return (
-      <Context.Provider value={{searchUser:searchUser, searchValue:searchValue, 
-      confirm:confirm, avatarUrl:avatarUrl, userLogin:userLogin, 
-      registerDate:registerDate, userName:userName, repos:repos, 
-      following:following, followers:followers, location:location, blog:blog, 
-      office:office, twitter:twitter, 
-      noResults:noResults, confirmedLogin:confirmedLogin, changeBg:changeBg, 
-      color:color, bgChangeIconSrc:bgChangeIconSrc, bgChangeActive:bgChangeActive, checkActive:checkActive,}}>
-        <Container/>
+  const data = {
+    searchUser:searchUser, 
+    searchValue:searchValue, 
+    confirm:confirm, 
+    avatarUrl:avatarUrl, 
+    userLogin:userLogin, 
+    registerDate:registerDate, 
+    userName:userName, 
+    repos:repos, 
+    following:following, 
+    followers:followers, 
+    location:location, 
+    blog:blog, 
+    office:office, 
+    twitter:twitter, 
+    noResults:noResults, 
+    confirmedLogin:confirmedLogin, 
+    changeBg:changeBg, 
+    color:color, 
+    bgChangeIconSrc:bgChangeIconSrc, 
+    bgChangeActive:bgChangeActive, 
+    checkActive:checkActive
+  };
+
+  return ( 
+      <Context.Provider value={
+        data
+      }>
+        <Container/> 
       </Context.Provider>
   );
 }

@@ -3,6 +3,7 @@
     height: 4em;
     overflow-y: scroll;
     font-style: normal;
+    font-family: 'Space Mono';
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
@@ -12,4 +13,10 @@
 }
 .bio::-webkit-scrollbar {
     display: none;
-  }
+}
+
+@media only screen and (max-width: 700px){
+    .bio{
+        text-align: center;
+    }
+}

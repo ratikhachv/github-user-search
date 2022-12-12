@@ -10,7 +10,7 @@ export default function Footer() {
     const context = useContext(Context)
   return (
     <div className='footer' >
-        <div className="footer-column" >
+        <div className="footer-column footer-column-left" >
             <div>
                 <img src={location} alt="" />
                 {context.location != null ? <p>{context.location}</p> : <p className="not-available">Not Available</p> }

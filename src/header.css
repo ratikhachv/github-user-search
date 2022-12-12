@@ -5,6 +5,7 @@ header{
     margin-bottom: 5vh;
 }
 header > p{
+    font-family: 'Space Mono';
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;

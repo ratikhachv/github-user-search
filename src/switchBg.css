@@ -2,7 +2,12 @@
     display: flex;
     align-items: center;
 }
+.switch-bg img{
+   cursor: pointer;
+}
+
 .switch-bg span{
+    font-family: 'Space Mono';
     font-weight: 700;
     font-size: 13px;
     line-height: 19px;
